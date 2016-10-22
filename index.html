@@ -1,85 +1,32 @@
-<!doctype html>
+<!DOCTYPE HTML>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Untitled Document</title>
-   <link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-
-<script>
-
-$(document).ready(function() {   
-            var sideslider = $('[data-toggle=collapse-side]');
-            var sel = sideslider.attr('data-target');
-            var sel2 = sideslider.attr('data-target-2');
-            sideslider.click(function(event){
-                $(sel).toggleClass('in');
-                $(sel2).toggleClass('out');
-            });
-        });
-</script>
-<style>
-
-body {
-          padding-top: 50px;
-          position: relative;
-      }
-      
-      pre {
-          tab-size: 8;
-      }
-      
-      @media screen and (max-width: 768px) {
-          .side-collapse-container{
-              width:100%;
-              position:relative;
-              left:0;
-              transition:left .4s;
-          }
-          .side-collapse-container.out{
-              left:200px;
-          }
-          .side-collapse {
-              top:50px;
-              bottom:0;
-              left:0;
-              width:200px;
-              position:fixed;
-              overflow:hidden;
-              transition:width .4s;
-          }
-          .side-collapse.in {
-              width:0;
-          }
-      }
-
-</style>
+<title>Employee Directory</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<link rel="stylesheet" href="css/jquery.mobile-1.0rc1.min.css" />
+<link rel="stylesheet" href="css/styles.css" />
 </head>
-
+    
 <body>
+        
+<div id="employeeListPage" data-role="page" >
 
-<header role="banner" class="navbar navbar-fixed-top navbar-inverse">
-      <div class="container">
-        <div class="navbar-header">
-          <button data-toggle="collapse-side" data-target=".side-collapse" data-target-2=".side-collapse-container" type="button" class="navbar-toggle pull-left"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-        </div>
-        <div class="navbar-inverse side-collapse in">
-          <nav role="navigation" class="navbar-collapse">
-            <ul class="nav navbar-nav">
-              <li><a href="#Home">Home</a></li>
-              <li><a href="#users">Users</a></li>
-              <li><a href="http://placesforlove.com">Places</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
-    <div class="container side-collapse-container">
-      <div class="row">
-        <h1>Hello</h1>
-        <p>This is a side opening nav demonstration</p>
-        <p>Make your browser smaller and the top menu wil become into a lateral slider menu</p>
-      </div>
-    </div>
+	<div data-role="header" data-position="fixed">
+		<h1>Employee Directory</h1>
+	</div>
+
+	<div data-role="content">
+         <ul id="employeeList" data-role="listview" data-filter="true"></ul>
+    </div>		
+
+</div>
+
+<script src="js/jquery.js"></script>
+<script src="js/jquery.mobile-1.0rc1.min.js"></script>
+<script src="js/employeelist.js"></script>
+<script src="js/employeedetails.js"></script>
+<script src="js/reportlist.js"></script>
 
 </body>
+
 </html>
